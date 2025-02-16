@@ -14,4 +14,9 @@ h1 {
     /* Optional: Add some pixel-perfect scaling */
     -webkit-font-smoothing: none;
     font-size: 24px;
+    /* Adding color to test if CSS is loading */
+    color: #333;
+    /* Add some spacing as 8-bit fonts can be dense */
+    letter-spacing: 2px;
+    line-height: 1.5;
 } 
