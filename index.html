@@ -6,13 +6,23 @@
     <title>Justin's Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        /* Reset any previous styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center everything and add spacing */
         .center-wrapper {
             text-align: center;
-            padding-top: 50px;
+            padding-top: 100px;  /* This drops down the content */
         }
-        
+
+        /* Style the main title */
         h1 {
             font-family: 'Press Start 2P', cursive;
+            color: black;  /* Explicitly set color to black */
             margin-bottom: 40px;
         }
 
@@ -54,28 +64,26 @@
 </head>
 <body>
     <div class="center-wrapper">
-        <div class="container">
-            <h1>Hi, I'm Justin!</h1>
-            
-            <button class="collapsible">About Me</button>
-            <div class="content">
-                <p>Your about me content here...</p>
-            </div>
+        <h1>Hi, I'm Justin!</h1>
+        
+        <button class="collapsible">About Me</button>
+        <div class="content">
+            <p>Your about me content here...</p>
+        </div>
 
-            <button class="collapsible">Projects</button>
-            <div class="content">
-                <p>Your projects content here...</p>
-            </div>
+        <button class="collapsible">Projects</button>
+        <div class="content">
+            <p>Your projects content here...</p>
+        </div>
 
-            <button class="collapsible">Experience</button>
-            <div class="content">
-                <p>Your experience content here...</p>
-            </div>
+        <button class="collapsible">Experience</button>
+        <div class="content">
+            <p>Your experience content here...</p>
+        </div>
 
-            <button class="collapsible">Contact</button>
-            <div class="content">
-                <p>Your contact information here...</p>
-            </div>
+        <button class="collapsible">Contact</button>
+        <div class="content">
+            <p>Your contact information here...</p>
         </div>
     </div>
 
