@@ -7,19 +7,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         .center-wrapper {
-            /* Add some basic styling to see if CSS works */
-            background-color: #f0f0f0;
-            padding: 20px;
+            text-align: center;
+            padding-top: 50px;
         }
         
         h1 {
             font-family: 'Press Start 2P', cursive;
-            -webkit-font-smoothing: none;
-            font-size: 24px;
-            /* Change color to something very noticeable */
-            color: #ff0000;
-            letter-spacing: 2px;
-            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .collapsible {
+            font-family: 'Press Start 2P', cursive;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .collapsible:before {
+            content: "►";
+            color: pink;
+            margin-right: 10px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .active:before {
+            transform: rotate(90deg);
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+        }
+
+        .content.show {
+            max-height: 500px;
         }
     </style>
 </head>
@@ -27,7 +56,39 @@
     <div class="center-wrapper">
         <div class="container">
             <h1>Hi, I'm Justin!</h1>
+            
+            <button class="collapsible">About Me</button>
+            <div class="content">
+                <p>Your about me content here...</p>
+            </div>
+
+            <button class="collapsible">Projects</button>
+            <div class="content">
+                <p>Your projects content here...</p>
+            </div>
+
+            <button class="collapsible">Experience</button>
+            <div class="content">
+                <p>Your experience content here...</p>
+            </div>
+
+            <button class="collapsible">Contact</button>
+            <div class="content">
+                <p>Your contact information here...</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        const collapsibles = document.querySelectorAll('.collapsible');
+        
+        collapsibles.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
